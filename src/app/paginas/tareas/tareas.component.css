@@ -1,0 +1,32 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en nuevas líneas */
+    gap: 1.5rem; /* Espacio entre las tarjetas */
+    padding: 0 1.5rem; /* Agrega espacio en los lados */
+  }
+  
+  .card-container p-card {
+    flex: 1 0 calc(33.33% - 1.5rem); /* Hace que cada tarjeta ocupe el 33.33% del ancho menos el espacio del gap */
+    box-sizing: border-box; /* Asegura que el padding no afecte al cálculo del ancho */
+  }
+  
+  @media (max-width: 1024px) {
+    .card-container p-card {
+      flex: 1 0 calc(50% - 1.5rem); /* En pantallas medianas (tablets), 2 tarjetas por fila */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card-container p-card {
+      flex: 1 0 100%; /* En pantallas pequeñas, 1 tarjeta por fila */
+    }
+  }
+  .modal-container {
+    position: fixed;
+    top: 40px; /* Puedes ajustar este valor */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: 750px;
+}
+
